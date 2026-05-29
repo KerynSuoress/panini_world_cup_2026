@@ -57,7 +57,8 @@ function introSections(): Section[] {
       colors: { primary: "#1B3FA0", accent: "#E8233A" },
       stickers: [
         { number: "00", type: "special", wide: false, label: "We Are Panini" },
-        { number: "FIFA", type: "special", wide: false, label: "FIFA World Cup Trophy" },
+        { number: "01", type: "special", wide: false, label: "FIFA World Cup Trophy" },
+        { number: "02", type: "special", wide: false, label: "FIFA World Cup Trophy" },
         { number: "FWC 3", type: "special", wide: false, label: "Official Mascots" },
         { number: "FWC 4", type: "special", wide: false, label: "Official Slogan" },
       ],

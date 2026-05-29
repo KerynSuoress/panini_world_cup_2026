@@ -17,7 +17,13 @@
           "label": "We Are Panini"
         },
         {
-          "number": "FIFA",
+          "number": "01",
+          "type": "special",
+          "wide": false,
+          "label": "FIFA World Cup Trophy"
+        },
+        {
+          "number": "02",
           "type": "special",
           "wide": false,
           "label": "FIFA World Cup Trophy"
