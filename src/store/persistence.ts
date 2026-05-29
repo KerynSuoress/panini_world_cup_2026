@@ -54,7 +54,7 @@ export async function initPersistence(session: Session): Promise<void> {
     $hydrated.set(true);
 
     const save = () => {
-      if (_importing) return;
+      if (_importing || !$hydrated.get()) return;
       localStorage.setItem(key, JSON.stringify({ owned: $owned.get(), repeats: $repeats.get() }));
     };
     $owned.subscribe(save);

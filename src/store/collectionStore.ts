@@ -29,12 +29,7 @@ export function decrementSticker(number: string) {
 
 export function setRepeat(number: string, count: number) {
   const next = Math.max(0, count);
-  if (next === 0) {
-    const { [number]: _, ...rest } = $repeats.get();
-    $repeats.set(rest);
-  } else {
-    $repeats.setKey(number, next);
-  }
+  $repeats.setKey(number, next);
 }
 
 export function incrementRepeat(number: string) {
