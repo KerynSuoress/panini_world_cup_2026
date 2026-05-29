@@ -29,16 +29,19 @@ export default function StickerCell({
   const isOwned = count > 0;
   const isDuplicate = count > 1;
 
-  let bgClass = "bg-white/40 border-white/60 text-gray-800";
+  // backdrop-blur is intentionally absent here — with ~994 cells on the page
+  // each blur creates its own compositing layer, which tanks GPU memory and
+  // frame rate. Higher opacity compensates visually.
+  let bgClass = "bg-white/75 border-white/70 text-gray-800";
   if (isDuplicate) {
-    bgClass = "bg-[var(--color-accent-yellow)]/70 border-white/80 text-yellow-900";
+    bgClass = "bg-[var(--color-accent-yellow)]/85 border-yellow-200/80 text-yellow-900";
   } else if (isOwned) {
-    bgClass = "bg-[var(--color-accent-green)]/70 border-white/80 text-green-900";
+    bgClass = "bg-[var(--color-accent-green)]/85 border-green-200/80 text-green-900";
   }
 
   return (
     <div
-      className={`relative flex min-h-[5rem] flex-col items-center justify-center rounded-xl border backdrop-blur-md shadow-sm transition-all ${
+      className={`relative flex min-h-[5rem] flex-col items-center justify-center rounded-xl border shadow-sm transition-colors ${
         wide ? "col-span-2 sm:col-span-2" : ""
       } ${bgClass}`}
     >

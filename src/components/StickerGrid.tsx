@@ -88,22 +88,23 @@ export default function StickerGrid() {
         const accent = section.colors?.accent ?? "#E8233A";
 
         return (
+          // section-cv applies content-visibility: auto so the browser skips
+          // paint/layout for sections that are fully off-screen.
           <section
             key={section.slug}
             id={`section-${section.slug}`}
-            className="overflow-hidden rounded-3xl bg-white/50 backdrop-blur-xl shadow-lg ring-1 ring-white/60"
+            className="section-cv overflow-hidden rounded-3xl bg-white/80 shadow-lg ring-1 ring-white/60"
           >
             <header
               className="px-4 py-3 text-white"
               style={{
-                background: `linear-gradient(135deg, ${primary}cc, ${accent}cc)`,
-                backdropFilter: "blur(12px)",
+                background: `linear-gradient(135deg, ${primary}e6, ${accent}e6)`,
               }}
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <h2 className="text-lg font-bold leading-tight drop-shadow-md">{section.name}</h2>
-                  <p className="text-xs opacity-90 drop-shadow-md">
+                  <h2 className="text-lg font-bold leading-tight">{section.name}</h2>
+                  <p className="text-xs opacity-90">
                     {section.type === "team" && section.group
                       ? `Group ${section.group}`
                       : "Special section"}
@@ -111,7 +112,7 @@ export default function StickerGrid() {
                     {stats.owned}/{stats.total} owned
                   </p>
                 </div>
-                <span className="rounded-full bg-white/30 px-2 py-0.5 text-xs font-bold shadow-sm backdrop-blur-md">
+                <span className="rounded-full bg-white/30 px-2 py-0.5 text-xs font-bold shadow-sm">
                   {stats.percent}%
                 </span>
               </div>
@@ -158,13 +159,13 @@ function FilterBar() {
   ];
 
   return (
-    <div className="flex gap-2 rounded-2xl bg-white/40 backdrop-blur-md p-1 shadow-sm ring-1 ring-white/60">
+    <div className="flex gap-2 rounded-2xl bg-white/80 p-1 shadow-sm ring-1 ring-white/60">
       {filters.map((f) => (
         <button
           key={f.id}
           type="button"
           onClick={() => $activeFilter.set(f.id)}
-          className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all ${
+          className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition-colors ${
             filter === f.id
               ? "bg-[var(--color-primary)] text-white shadow-md"
               : "text-gray-700 hover:bg-white/60"
@@ -188,7 +189,7 @@ function SectionSelect() {
       <select
         value={active}
         onChange={(e) => $activeSection.set(e.target.value)}
-        className="w-full rounded-2xl border border-white/60 bg-white/50 backdrop-blur-md px-4 py-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
+        className="w-full rounded-2xl border border-white/60 bg-white/80 px-4 py-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors"
       >
         <option value="">All sections</option>
         {catalog.sections.map((s) => (

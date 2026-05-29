@@ -30,8 +30,12 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
+  /* background-attachment: fixed is intentionally omitted — it forces the
+     browser off the GPU compositor path and causes full-page repaints on
+     every scroll frame. The gradient is effectively full-viewport so it
+     looks identical without it. */
   background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: var(--color-text);
   min-height: 100dvh;
 }
@@ -54,4 +58,12 @@ body::after {
 
 .safe-bottom {
   padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Skip painting/layout for off-screen album sections. The browser remembers
+   the real height after first render (contain-intrinsic-size: auto) so the
+   scroll bar stays stable. */
+.section-cv {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }
