@@ -12,7 +12,7 @@ const ok = () => new Response(JSON.stringify({ ok: true }), { headers });
 // Single sticker update
 export const PATCH: APIRoute = async ({ request }) => {
   const db = getDb();
-  if (!db) return ok();
+  if (!db) return new Response(JSON.stringify({ ok: false, error: 'No database connection' }), { status: 503, headers });
 
   try {
     const { profileId, stickerNumber, owned, repeats } = await request.json();
@@ -31,7 +31,7 @@ export const PATCH: APIRoute = async ({ request }) => {
 // Bulk replace (used by import)
 export const PUT: APIRoute = async ({ request }) => {
   const db = getDb();
-  if (!db) return ok();
+  if (!db) return new Response(JSON.stringify({ ok: false, error: 'No database connection' }), { status: 503, headers });
 
   try {
     const { profileId, owned, repeats } = await request.json() as {
