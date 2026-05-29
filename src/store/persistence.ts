@@ -42,12 +42,12 @@ export async function initPersistence(session: Session): Promise<void> {
       .catch((e) => console.error('[persistence] PATCH error for', stickerNumber, e));
   };
 
-  $owned.subscribe((_owned, changedKey) => {
+  $owned.subscribe((_owned, _oldOwned, changedKey) => {
     if (_importing || !changedKey || !$hydrated.get()) return;
     patch(changedKey);
   });
 
-  $repeats.subscribe((_repeats, changedKey) => {
+  $repeats.subscribe((_repeats, _oldRepeats, changedKey) => {
     if (_importing || !changedKey || !$hydrated.get()) return;
     patch(changedKey);
   });
