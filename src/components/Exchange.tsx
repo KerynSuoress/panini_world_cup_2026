@@ -189,7 +189,8 @@ export default function Exchange() {
         {
           id: "match",
           label: "Match",
-          count: result.summary.mutualCount,
+          // Show total items visible in this tab (both sides combined)
+          count: result.summary.youGiveCount + result.summary.youGetCount,
         },
         {
           id: "give",
@@ -260,7 +261,7 @@ export default function Exchange() {
               <p className="text-2xl font-black tabular-nums text-[var(--color-accent-teal)]">
                 {result.summary.mutualCount}
               </p>
-              <p className="text-xs font-semibold text-gray-600">Total trade</p>
+              <p className="text-xs font-semibold text-gray-600">Can swap</p>
             </div>
             <div className="rounded-2xl bg-[var(--color-accent-yellow)]/25 px-3 py-3 text-center ring-1 ring-[var(--color-accent-yellow)]/40">
               <p className="text-2xl font-black tabular-nums text-yellow-800">

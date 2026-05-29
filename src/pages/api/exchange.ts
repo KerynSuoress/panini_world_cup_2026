@@ -119,7 +119,10 @@ export const POST: APIRoute = async ({ request }) => {
         summary: {
           youGiveCount: youGive.length,
           youGetCount: youGet.length,
-          mutualCount: youGive.length + youGet.length,
+          // Realistic 1-for-1 swaps = the smaller pile.
+          // If you have 229 to give but they have 0 to give back, 0 trades
+          // can actually happen symmetrically.
+          mutualCount: Math.min(youGive.length, youGet.length),
         },
       }),
       { headers },

@@ -57,11 +57,15 @@ export default function Navigation({ title, activeTab }: NavigationProps) {
 
   return (
     <>
-      {/* backdrop-blur on a sticky element recalculates every scroll frame at
-          120 Hz — replaced with a near-opaque white + stronger border instead.
-          will-change-transform promotes the header to its own GPU compositing
-          layer so the page content scrolls without touching this element. */}
-      <header className="sticky top-0 z-40 w-full border-b border-gray-200/70 bg-white/96 px-5 py-3 shadow-sm will-change-transform md:px-16">
+      {/* will-change-transform promotes the header to its own GPU compositing
+          layer. With the element on its own layer, backdrop-blur-md (12px)
+          costs a fraction of the original backdrop-blur-xl (24px) because:
+            - Smaller radius = smaller sample area for the GPU
+            - Dedicated layer = browser doesn't repaint header + page together
+          backdrop-saturate-150 is the Apple liquid-glass trick: boosting
+          saturation makes underlying colors read through vividly even at
+          lower blur radii. */}
+      <header className="sticky top-0 z-40 w-full border-b border-white/20 bg-white/30 px-5 py-3 backdrop-blur-md backdrop-saturate-150 shadow-sm will-change-transform md:px-16">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo + year */}
         <div className="flex items-center gap-3">
