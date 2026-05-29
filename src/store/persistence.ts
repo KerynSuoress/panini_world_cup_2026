@@ -31,6 +31,7 @@ export async function initPersistence(session: Session): Promise<void> {
   }
 
   if (activeSession.mode === 'db' && activeSession.profileId > 0) {
+    console.log('[persistence] DB mode, loading profileId', activeSession.profileId, 'email', activeSession.email);
     // Load from DB
     let dbOwned: Record<string, boolean> = {};
     let dbRepeats: Record<string, number> = {};
@@ -41,9 +42,12 @@ export async function initPersistence(session: Session): Promise<void> {
         const data = await res.json();
         dbOwned = data.owned ?? {};
         dbRepeats = data.repeats ?? {};
+        console.log('[persistence] Loaded from DB:', Object.keys(dbOwned).length, 'owned,', Object.keys(dbRepeats).length, 'repeats');
+      } else {
+        console.warn('[persistence] DB load returned status', res.status);
       }
-    } catch {
-      console.warn('[persistence] Failed to load from DB, trying localStorage fallback');
+    } catch (err) {
+      console.warn('[persistence] Failed to load from DB:', err);
     }
 
     // If DB returned nothing but localStorage has data (migration scenario), upload it
@@ -84,22 +88,30 @@ export async function initPersistence(session: Session): Promise<void> {
       if (_importing || !changedKey || !$hydrated.get()) return;
       const pid = $session.get()?.profileId;
       if (!pid || pid < 0) return;
+      console.log('[persistence] saving', changedKey, '→ owned', owned[changedKey], 'profileId', pid);
       fetch('/api/collection', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ profileId: pid, stickerNumber: changedKey, owned: owned[changedKey] ?? false, repeats: $repeats.get()[changedKey] ?? 0 }),
-      }).catch(() => console.warn('[persistence] PATCH failed for', changedKey));
+      })
+        .then((r) => r.json())
+        .then((j) => console.log('[persistence] save result for', changedKey, j))
+        .catch((e) => console.warn('[persistence] PATCH failed for', changedKey, e));
     });
 
     $repeats.subscribe((repeats, changedKey) => {
       if (_importing || !changedKey || !$hydrated.get()) return;
       const pid = $session.get()?.profileId;
       if (!pid || pid < 0) return;
+      console.log('[persistence] saving', changedKey, '→ repeats', repeats[changedKey], 'profileId', pid);
       fetch('/api/collection', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ profileId: pid, stickerNumber: changedKey, owned: $owned.get()[changedKey] ?? false, repeats: repeats[changedKey] ?? 0 }),
-      }).catch(() => console.warn('[persistence] PATCH failed for', changedKey));
+      })
+        .then((r) => r.json())
+        .then((j) => console.log('[persistence] save result for', changedKey, j))
+        .catch((e) => console.warn('[persistence] PATCH failed for', changedKey, e));
     });
   } else {
     // True local mode — DB genuinely unavailable
