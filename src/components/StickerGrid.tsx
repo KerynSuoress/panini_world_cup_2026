@@ -26,16 +26,25 @@ export default function StickerGrid() {
 
   useEffect(() => {
     const SCROLL_SHOW_THRESHOLD = 320;
+    let rafId: number | null = null;
+
     const onScroll = () => {
-      const y =
-        window.scrollY ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
-      setShowBackToTop(y > SCROLL_SHOW_THRESHOLD);
+      // Throttle to one setState per animation frame so we never trigger
+      // React work more than once per rendered frame regardless of how
+      // rapidly scroll events fire (important on 120 Hz displays).
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        setShowBackToTop(window.scrollY > SCROLL_SHOW_THRESHOLD);
+        rafId = null;
+      });
     };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -189,7 +198,7 @@ function SectionSelect() {
       <select
         value={active}
         onChange={(e) => $activeSection.set(e.target.value)}
-        className="w-full rounded-2xl border border-white/60 bg-white/80 px-4 py-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors"
+        className="w-full rounded-2xl border border-white/60 bg-white/80 pl-4 pr-10 py-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors"
       >
         <option value="">All sections</option>
         {catalog.sections.map((s) => (

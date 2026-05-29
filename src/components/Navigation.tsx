@@ -5,13 +5,14 @@ import { resetPersistence } from "../store/persistence";
 
 interface NavigationProps {
   title: string;
-  activeTab: "grid" | "repeats" | "dashboard" | "data";
+  activeTab: "grid" | "repeats" | "dashboard" | "exchange" | "data";
 }
 
 const tabs = [
   { id: "grid" as const, label: "Album", href: "/grid" },
   { id: "repeats" as const, label: "Repeats", href: "/repeats" },
   { id: "dashboard" as const, label: "Analytics", href: "/dashboard" },
+  { id: "exchange" as const, label: "Exchange", href: "/exchange" },
   { id: "data" as const, label: "Data Sync", href: "/data" },
 ];
 
@@ -56,7 +57,11 @@ export default function Navigation({ title, activeTab }: NavigationProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-white/20 bg-white/40 px-5 py-3 backdrop-blur-xl shadow-sm md:px-16">
+      {/* backdrop-blur on a sticky element recalculates every scroll frame at
+          120 Hz — replaced with a near-opaque white + stronger border instead.
+          will-change-transform promotes the header to its own GPU compositing
+          layer so the page content scrolls without touching this element. */}
+      <header className="sticky top-0 z-40 w-full border-b border-gray-200/70 bg-white/96 px-5 py-3 shadow-sm will-change-transform md:px-16">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo + year */}
         <div className="flex items-center gap-3">
