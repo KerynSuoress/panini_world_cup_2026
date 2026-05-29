@@ -26,11 +26,13 @@ console.log(`[migrate] Connecting via env var: ${foundKey}`);
 
 const migrationsFolder = join(dirname(fileURLToPath(import.meta.url)), "..", "drizzle");
 
-// 10 second timeout — if DB is unreachable, don't block app startup
+// 10 second timeout — if DB is unreachable, don't block app startup.
+// SSL must match src/lib/db.ts — Railway MySQL requires it.
 const pool = mysql.createPool({
   uri: url,
   connectTimeout: 10000,
   connectionLimit: 1,
+  ssl: { rejectUnauthorized: false },
 });
 
 try {
