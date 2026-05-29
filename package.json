@@ -1,0 +1,40 @@
+{
+  "name": "panini-tracker",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "catalog:build": "tsx scripts/build-catalog.ts",
+    "catalog:colors": "tsx scripts/extract-colors.ts",
+    "catalog:kit-colors": "tsx scripts/apply-team-kit-colors.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@astrojs/node": "^10.1.2",
+    "@astrojs/react": "^5.0.6",
+    "@nanostores/react": "^1.1.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.2",
+    "drizzle-orm": "^0.45.2",
+    "mysql2": "^3.22.4",
+    "nanostores": "^1.3.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "drizzle-kit": "^0.31.10",
+    "sharp": "^0.34.5",
+    "tsx": "^4.22.3"
+  }
+}

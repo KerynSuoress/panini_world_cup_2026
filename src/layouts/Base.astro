@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+import AppInit from "../components/AppInit";
+import Navigation from "../components/Navigation";
+
+interface Props {
+  title: string;
+  activeTab: "grid" | "repeats" | "dashboard" | "data";
+}
+
+const { title, activeTab } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Track your Panini FIFA World Cup 2026 sticker collection" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} · Panini Tracker</title>
+  </head>
+  <body>
+    <AppInit client:load />
+    <Navigation client:load title={title} activeTab={activeTab} />
+    <div class="mx-auto min-h-dvh max-w-7xl">
+      <main class="px-5 py-6 md:px-16">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5735 @@
+{
+  "sections": [
+    {
+      "slug": "intro-we-are-panini",
+      "name": "We Are Panini",
+      "type": "special",
+      "photoIndex": 1,
+      "colors": {
+        "primary": "#ffe01d",
+        "accent": "#24755a"
+      },
+      "stickers": [
+        {
+          "number": "00",
+          "type": "special",
+          "wide": false,
+          "label": "We Are Panini"
+        },
+        {
+          "number": "FIFA",
+          "type": "special",
+          "wide": false,
+          "label": "FIFA World Cup Trophy"
+        },
+        {
+          "number": "FWC 3",
+          "type": "special",
+          "wide": false,
+          "label": "Official Mascots"
+        },
+        {
+          "number": "FWC 4",
+          "type": "special",
+          "wide": false,
+          "label": "Official Slogan"
+        }
+      ]
+    },
+    {
+      "slug": "intro-host-cities",
+      "name": "Host Countries & Cities",
+      "type": "special",
+      "photoIndex": 2,
+      "colors": {
+        "primary": "#f64b29",
+        "accent": "#c6d53f"
+      },
+      "stickers": [
+        {
+          "number": "FWC 5",
+          "type": "special",
+          "wide": false,
+          "label": "Official Match Ball"
+        },
+        {
+          "number": "FWC 6",
+          "type": "special",
+          "wide": false,
+          "label": "Host Trophy Hologram"
+        },
+        {
+          "number": "FWC 7",
+          "type": "special",
+          "wide": false,
+          "label": "Host Country Emblem"
+        },
+        {
+          "number": "FWC 8",
+          "type": "special",
+          "wide": false,
+          "label": "Host Trophy Hologram"
+        }
+      ]
+    },
+    {
+      "slug": "mexico",
+      "name": "Mexico",
+      "code": "MEX",
+      "group": "A",
+      "type": "team",
+      "photoIndex": 3,
+      "colors": {
+        "primary": "#00933B",
+        "accent": "#F5313E"
+      },
+      "stickers": [
+        {
+          "number": "MEX-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "MEX-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "MEX-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MEX-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "south-africa",
+      "name": "South Africa",
+      "code": "RSA",
+      "group": "A",
+      "type": "team",
+      "photoIndex": 4,
+      "colors": {
+        "primary": "#007A4D",
+        "accent": "#FFB81C"
+      },
+      "stickers": [
+        {
+          "number": "RSA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "RSA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "RSA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "RSA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "korea-republic",
+      "name": "Korea Republic",
+      "code": "KOR",
+      "group": "A",
+      "type": "team",
+      "photoIndex": 5,
+      "colors": {
+        "primary": "#CD2E3A",
+        "accent": "#0047A0"
+      },
+      "stickers": [
+        {
+          "number": "KOR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "KOR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "KOR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KOR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "czechia",
+      "name": "Czechia",
+      "code": "CZE",
+      "group": "A",
+      "type": "team",
+      "photoIndex": 6,
+      "colors": {
+        "primary": "#D7141A",
+        "accent": "#11457E"
+      },
+      "stickers": [
+        {
+          "number": "CZE-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CZE-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CZE-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CZE-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "canada",
+      "name": "Canada",
+      "code": "CAN",
+      "group": "B",
+      "type": "team",
+      "photoIndex": 7,
+      "colors": {
+        "primary": "#D80621",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "CAN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CAN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CAN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CAN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "bosnia-herzegovina",
+      "name": "Bosnia-Herzegovina",
+      "code": "BIH",
+      "group": "B",
+      "type": "team",
+      "photoIndex": 8,
+      "colors": {
+        "primary": "#002395",
+        "accent": "#FECB00"
+      },
+      "stickers": [
+        {
+          "number": "BIH-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "BIH-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "BIH-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BIH-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "qatar",
+      "name": "Qatar",
+      "code": "QAT",
+      "group": "B",
+      "type": "team",
+      "photoIndex": 9,
+      "colors": {
+        "primary": "#8A1538",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "QAT-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "QAT-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "QAT-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "QAT-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "switzerland",
+      "name": "Switzerland",
+      "code": "SUI",
+      "group": "B",
+      "type": "team",
+      "photoIndex": 10,
+      "colors": {
+        "primary": "#FF0000",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "SUI-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "SUI-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "SUI-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SUI-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "brazil",
+      "name": "Brazil",
+      "code": "BRA",
+      "group": "C",
+      "type": "team",
+      "photoIndex": 11,
+      "colors": {
+        "primary": "#FFDC02",
+        "accent": "#19AE47"
+      },
+      "stickers": [
+        {
+          "number": "BRA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "BRA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "BRA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BRA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "morocco",
+      "name": "Morocco",
+      "code": "MAR",
+      "group": "C",
+      "type": "team",
+      "photoIndex": 12,
+      "colors": {
+        "primary": "#C1272D",
+        "accent": "#006233"
+      },
+      "stickers": [
+        {
+          "number": "MAR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "MAR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "MAR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "MAR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "haiti",
+      "name": "Haiti",
+      "code": "HAI",
+      "group": "C",
+      "type": "team",
+      "photoIndex": 13,
+      "colors": {
+        "primary": "#00209F",
+        "accent": "#D21034"
+      },
+      "stickers": [
+        {
+          "number": "HAI-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "HAI-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "HAI-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "HAI-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "scotland",
+      "name": "Scotland",
+      "code": "SCO",
+      "group": "C",
+      "type": "team",
+      "photoIndex": 14,
+      "colors": {
+        "primary": "#003876",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "SCO-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "SCO-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "SCO-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SCO-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "usa",
+      "name": "USA",
+      "code": "USA",
+      "group": "D",
+      "type": "team",
+      "photoIndex": 15,
+      "colors": {
+        "primary": "#002868",
+        "accent": "#BF0A30"
+      },
+      "stickers": [
+        {
+          "number": "USA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "USA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "USA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "USA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "paraguay",
+      "name": "Paraguay",
+      "code": "PAR",
+      "group": "D",
+      "type": "team",
+      "photoIndex": 16,
+      "colors": {
+        "primary": "#D52B1E",
+        "accent": "#0038A8"
+      },
+      "stickers": [
+        {
+          "number": "PAR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "PAR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "PAR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "australia",
+      "name": "Australia",
+      "code": "AUS",
+      "group": "D",
+      "type": "team",
+      "photoIndex": 17,
+      "colors": {
+        "primary": "#FFCD00",
+        "accent": "#00843D"
+      },
+      "stickers": [
+        {
+          "number": "AUS-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "AUS-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "AUS-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUS-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "turkiye",
+      "name": "Türkiye",
+      "code": "TUR",
+      "group": "D",
+      "type": "team",
+      "photoIndex": 18,
+      "colors": {
+        "primary": "#E30A17",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "TUR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "TUR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "TUR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "germany",
+      "name": "Germany",
+      "code": "GER",
+      "group": "E",
+      "type": "team",
+      "photoIndex": 19,
+      "colors": {
+        "primary": "#000000",
+        "accent": "#D71016"
+      },
+      "stickers": [
+        {
+          "number": "GER-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "GER-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "GER-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GER-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "curacao",
+      "name": "Curaçao",
+      "code": "CUW",
+      "group": "E",
+      "type": "team",
+      "photoIndex": 20,
+      "colors": {
+        "primary": "#002B7F",
+        "accent": "#F9E814"
+      },
+      "stickers": [
+        {
+          "number": "CUW-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CUW-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CUW-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CUW-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "cote-d-ivoire",
+      "name": "Côte d'Ivoire",
+      "code": "CIV",
+      "group": "E",
+      "type": "team",
+      "photoIndex": 21,
+      "colors": {
+        "primary": "#F77F00",
+        "accent": "#009E60"
+      },
+      "stickers": [
+        {
+          "number": "CIV-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CIV-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CIV-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CIV-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "ecuador",
+      "name": "Ecuador",
+      "code": "ECU",
+      "group": "E",
+      "type": "team",
+      "photoIndex": 22,
+      "colors": {
+        "primary": "#FFD100",
+        "accent": "#034EA2"
+      },
+      "stickers": [
+        {
+          "number": "ECU-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "ECU-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "ECU-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ECU-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "netherlands",
+      "name": "Netherlands",
+      "code": "NED",
+      "group": "F",
+      "type": "team",
+      "photoIndex": 23,
+      "colors": {
+        "primary": "#F36C21",
+        "accent": "#21468B"
+      },
+      "stickers": [
+        {
+          "number": "NED-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "NED-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "NED-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NED-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "japan",
+      "name": "Japan",
+      "code": "JPN",
+      "group": "F",
+      "type": "team",
+      "photoIndex": 24,
+      "colors": {
+        "primary": "#000555",
+        "accent": "#E30016"
+      },
+      "stickers": [
+        {
+          "number": "JPN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "JPN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "JPN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JPN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "sweden",
+      "name": "Sweden",
+      "code": "SWE",
+      "group": "F",
+      "type": "team",
+      "photoIndex": 25,
+      "colors": {
+        "primary": "#FFCD00",
+        "accent": "#006AA7"
+      },
+      "stickers": [
+        {
+          "number": "SWE-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "SWE-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "SWE-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SWE-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "tunisia",
+      "name": "Tunisia",
+      "code": "TUN",
+      "group": "F",
+      "type": "team",
+      "photoIndex": 26,
+      "colors": {
+        "primary": "#E70013",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "TUN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "TUN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "TUN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "TUN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "belgium",
+      "name": "Belgium",
+      "code": "BEL",
+      "group": "G",
+      "type": "team",
+      "photoIndex": 27,
+      "colors": {
+        "primary": "#ED2939",
+        "accent": "#FAE042"
+      },
+      "stickers": [
+        {
+          "number": "BEL-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "BEL-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "BEL-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "BEL-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "egypt",
+      "name": "Egypt",
+      "code": "EGY",
+      "group": "G",
+      "type": "team",
+      "photoIndex": 28,
+      "colors": {
+        "primary": "#CE1126",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "EGY-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "EGY-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "EGY-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "EGY-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "iran",
+      "name": "Iran",
+      "code": "IRN",
+      "group": "G",
+      "type": "team",
+      "photoIndex": 29,
+      "colors": {
+        "primary": "#239F40",
+        "accent": "#DA0000"
+      },
+      "stickers": [
+        {
+          "number": "IRN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "IRN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "IRN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "new-zealand",
+      "name": "New Zealand",
+      "code": "NZL",
+      "group": "G",
+      "type": "team",
+      "photoIndex": 30,
+      "colors": {
+        "primary": "#000000",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "NZL-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "NZL-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "NZL-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NZL-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "spain",
+      "name": "Spain",
+      "code": "ESP",
+      "group": "H",
+      "type": "team",
+      "photoIndex": 31,
+      "colors": {
+        "primary": "#8B0D11",
+        "accent": "#FCB507"
+      },
+      "stickers": [
+        {
+          "number": "ESP-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "ESP-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "ESP-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ESP-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "cabo-verde",
+      "name": "Cabo Verde",
+      "code": "CPV",
+      "group": "H",
+      "type": "team",
+      "photoIndex": 32,
+      "colors": {
+        "primary": "#003893",
+        "accent": "#CF2027"
+      },
+      "stickers": [
+        {
+          "number": "CPV-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CPV-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CPV-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CPV-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "saudi-arabia",
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "group": "H",
+      "type": "team",
+      "photoIndex": 33,
+      "colors": {
+        "primary": "#006C35",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "KSA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "KSA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "KSA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "KSA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "uruguay",
+      "name": "Uruguay",
+      "code": "URU",
+      "group": "H",
+      "type": "team",
+      "photoIndex": 34,
+      "colors": {
+        "primary": "#55B5E4",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "URU-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "URU-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "URU-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "URU-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "code": "FRA",
+      "group": "I",
+      "type": "team",
+      "photoIndex": 35,
+      "colors": {
+        "primary": "#17548C",
+        "accent": "#ED2939"
+      },
+      "stickers": [
+        {
+          "number": "FRA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "FRA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "FRA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "FRA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "senegal",
+      "name": "Senegal",
+      "code": "SEN",
+      "group": "I",
+      "type": "team",
+      "photoIndex": 36,
+      "colors": {
+        "primary": "#00853F",
+        "accent": "#FDEF42"
+      },
+      "stickers": [
+        {
+          "number": "SEN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "SEN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "SEN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "SEN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "iraq",
+      "name": "Iraq",
+      "code": "IRQ",
+      "group": "I",
+      "type": "team",
+      "photoIndex": 37,
+      "colors": {
+        "primary": "#CE1126",
+        "accent": "#007A3D"
+      },
+      "stickers": [
+        {
+          "number": "IRQ-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "IRQ-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "IRQ-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "IRQ-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "norway",
+      "name": "Norway",
+      "code": "NOR",
+      "group": "I",
+      "type": "team",
+      "photoIndex": 38,
+      "colors": {
+        "primary": "#BA0C2F",
+        "accent": "#00205B"
+      },
+      "stickers": [
+        {
+          "number": "NOR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "NOR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "NOR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "NOR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "argentina",
+      "name": "Argentina",
+      "code": "ARG",
+      "group": "J",
+      "type": "team",
+      "photoIndex": 39,
+      "colors": {
+        "primary": "#43A1D5",
+        "accent": "#173E69"
+      },
+      "stickers": [
+        {
+          "number": "ARG-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "ARG-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "ARG-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ARG-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "algeria",
+      "name": "Algeria",
+      "code": "ALG",
+      "group": "J",
+      "type": "team",
+      "photoIndex": 40,
+      "colors": {
+        "primary": "#006233",
+        "accent": "#D21034"
+      },
+      "stickers": [
+        {
+          "number": "ALG-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "ALG-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "ALG-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ALG-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "austria",
+      "name": "Austria",
+      "code": "AUT",
+      "group": "J",
+      "type": "team",
+      "photoIndex": 41,
+      "colors": {
+        "primary": "#ED2939",
+        "accent": "#FFFFFF"
+      },
+      "stickers": [
+        {
+          "number": "AUT-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "AUT-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "AUT-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "AUT-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "jordan",
+      "name": "Jordan",
+      "code": "JOR",
+      "group": "J",
+      "type": "team",
+      "photoIndex": 42,
+      "colors": {
+        "primary": "#007A3D",
+        "accent": "#CE1126"
+      },
+      "stickers": [
+        {
+          "number": "JOR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "JOR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "JOR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "JOR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "portugal",
+      "name": "Portugal",
+      "code": "POR",
+      "group": "K",
+      "type": "team",
+      "photoIndex": 43,
+      "colors": {
+        "primary": "#E42518",
+        "accent": "#0D6938"
+      },
+      "stickers": [
+        {
+          "number": "POR-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "POR-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "POR-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "POR-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "congo-dr",
+      "name": "Congo DR",
+      "code": "COD",
+      "group": "K",
+      "type": "team",
+      "photoIndex": 44,
+      "colors": {
+        "primary": "#007FFF",
+        "accent": "#F7D618"
+      },
+      "stickers": [
+        {
+          "number": "COD-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "COD-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "COD-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COD-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "uzbekistan",
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "group": "K",
+      "type": "team",
+      "photoIndex": 45,
+      "colors": {
+        "primary": "#1EB53A",
+        "accent": "#0099B5"
+      },
+      "stickers": [
+        {
+          "number": "UZB-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "UZB-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "UZB-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "UZB-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "colombia",
+      "name": "Colombia",
+      "code": "COL",
+      "group": "K",
+      "type": "team",
+      "photoIndex": 46,
+      "colors": {
+        "primary": "#FCD116",
+        "accent": "#003893"
+      },
+      "stickers": [
+        {
+          "number": "COL-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "COL-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "COL-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "COL-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "england",
+      "name": "England",
+      "code": "ENG",
+      "group": "L",
+      "type": "team",
+      "photoIndex": 47,
+      "colors": {
+        "primary": "#2B57AC",
+        "accent": "#EA1F29"
+      },
+      "stickers": [
+        {
+          "number": "ENG-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "ENG-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "ENG-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "ENG-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "croatia",
+      "name": "Croatia",
+      "code": "CRO",
+      "group": "L",
+      "type": "team",
+      "photoIndex": 48,
+      "colors": {
+        "primary": "#FF0000",
+        "accent": "#171796"
+      },
+      "stickers": [
+        {
+          "number": "CRO-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "CRO-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "CRO-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "CRO-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "ghana",
+      "name": "Ghana",
+      "code": "GHA",
+      "group": "L",
+      "type": "team",
+      "photoIndex": 49,
+      "colors": {
+        "primary": "#CE1126",
+        "accent": "#FCD116"
+      },
+      "stickers": [
+        {
+          "number": "GHA-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "GHA-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "GHA-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "GHA-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "panama",
+      "name": "Panama",
+      "code": "PAN",
+      "group": "L",
+      "type": "team",
+      "photoIndex": 50,
+      "colors": {
+        "primary": "#DA121A",
+        "accent": "#005293"
+      },
+      "stickers": [
+        {
+          "number": "PAN-1",
+          "type": "shield",
+          "wide": false
+        },
+        {
+          "number": "PAN-2",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-3",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-4",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-5",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-6",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-7",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-8",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-9",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-10",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-11",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-12",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-13",
+          "type": "teamphoto",
+          "wide": true
+        },
+        {
+          "number": "PAN-14",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-15",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-16",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-17",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-18",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-19",
+          "type": "player",
+          "wide": false
+        },
+        {
+          "number": "PAN-20",
+          "type": "player",
+          "wide": false
+        }
+      ]
+    },
+    {
+      "slug": "history-1930-1974",
+      "name": "FIFA World Cup History (1930–1974)",
+      "type": "special",
+      "photoIndex": 51,
+      "colors": {
+        "primary": "#373962",
+        "accent": "#ad6a1c"
+      },
+      "stickers": [
+        {
+          "number": "FWC 9",
+          "type": "special",
+          "wide": false,
+          "label": "1930 Winner"
+        },
+        {
+          "number": "FWC 10",
+          "type": "special",
+          "wide": false,
+          "label": "1938 Winner"
+        },
+        {
+          "number": "FWC 11",
+          "type": "special",
+          "wide": false,
+          "label": "1950 Winner"
+        },
+        {
+          "number": "FWC 12",
+          "type": "special",
+          "wide": false,
+          "label": "1962 Winner"
+        },
+        {
+          "number": "FWC 13",
+          "type": "special",
+          "wide": false,
+          "label": "1974 Winner"
+        }
+      ]
+    },
+    {
+      "slug": "history-1978-2022",
+      "name": "FIFA World Cup History (1978–2022)",
+      "type": "special",
+      "photoIndex": 52,
+      "colors": {
+        "primary": "#333966",
+        "accent": "#b47523"
+      },
+      "stickers": [
+        {
+          "number": "FWC 14",
+          "type": "special",
+          "wide": false,
+          "label": "1978 Winner"
+        },
+        {
+          "number": "FWC 15",
+          "type": "special",
+          "wide": false,
+          "label": "1982 Winner"
+        },
+        {
+          "number": "FWC 16",
+          "type": "special",
+          "wide": false,
+          "label": "1986 Winner"
+        },
+        {
+          "number": "FWC 17",
+          "type": "special",
+          "wide": false,
+          "label": "2006 Winner"
+        },
+        {
+          "number": "FWC 18",
+          "type": "special",
+          "wide": false,
+          "label": "2014 Winner"
+        },
+        {
+          "number": "FWC 19",
+          "type": "special",
+          "wide": false,
+          "label": "2022 Winner"
+        }
+      ]
+    },
+    {
+      "slug": "coca-cola-legends",
+      "name": "Coca-Cola Legends",
+      "code": "CC",
+      "type": "special",
+      "photoIndex": 53,
+      "colors": {
+        "primary": "#c61818",
+        "accent": "#82b0ae"
+      },
+      "stickers": [
+        {
+          "number": "CC1",
+          "type": "special",
+          "wide": false,
+          "label": "Lamine Yamal"
+        },
+        {
+          "number": "CC2",
+          "type": "special",
+          "wide": false,
+          "label": "Joshua Kimmich"
+        },
+        {
+          "number": "CC3",
+          "type": "special",
+          "wide": false,
+          "label": "Joško Gvardiol"
+        },
+        {
+          "number": "CC4",
+          "type": "special",
+          "wide": false,
+          "label": "Santiago Giménez"
+        },
+        {
+          "number": "CC5",
+          "type": "special",
+          "wide": false,
+          "label": "Federico Valverde"
+        },
+        {
+          "number": "CC6",
+          "type": "special",
+          "wide": false,
+          "label": "Harry Kane"
+        },
+        {
+          "number": "CC7",
+          "type": "special",
+          "wide": false,
+          "label": "Jefferson Lerma"
+        },
+        {
+          "number": "CC8",
+          "type": "special",
+          "wide": false,
+          "label": "Enner Valencia"
+        },
+        {
+          "number": "CC9",
+          "type": "special",
+          "wide": false,
+          "label": "Virgil van Dijk"
+        },
+        {
+          "number": "CC10",
+          "type": "special",
+          "wide": false,
+          "label": "Raúl Jiménez"
+        },
+        {
+          "number": "CC11",
+          "type": "special",
+          "wide": false,
+          "label": "Alphonso Davies"
+        },
+        {
+          "number": "CC12",
+          "type": "special",
+          "wide": false,
+          "label": "Emiliano Martínez"
+        },
+        {
+          "number": "CC13",
+          "type": "special",
+          "wide": false,
+          "label": "Gabriel Magalhães"
+        },
+        {
+          "number": "CC14",
+          "type": "special",
+          "wide": false,
+          "label": "Lautaro Martínez"
+        }
+      ]
+    }
+  ]
+}
