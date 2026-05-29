@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   groupExchangeBySection,
   formatExchangeShareText,
@@ -334,16 +334,16 @@ export default function Exchange() {
   const [result, setResult] = useState<ExchangeResponse | null>(null);
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied">("idle");
 
-  // Restore last-used partner email
-  useState(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem(PARTNER_EMAIL_KEY);
-      if (saved) setPartnerEmail(saved);
-    }
-  });
+  useEffect(() => {
+    const saved = localStorage.getItem(PARTNER_EMAIL_KEY);
+    if (saved) setPartnerEmail(saved);
+  }, []);
 
   const runExchange = useCallback(async () => {
-    if (!session) return;
+    if (!session) {
+      setError("Session not ready yet — wait a second and try again.");
+      return;
+    }
     const email = partnerEmail.trim().toLowerCase();
     if (!email.includes("@")) {
       setError("Enter a valid email address.");
@@ -452,7 +452,7 @@ export default function Exchange() {
         />
         <button
           type="submit"
-          disabled={loading || !session}
+          disabled={loading}
           className="rounded-2xl bg-[var(--color-primary)] px-6 py-3 text-sm font-bold text-white shadow-md transition-all hover:opacity-95 active:scale-[0.98] disabled:opacity-50"
         >
           {loading ? "Checking…" : "Compare"}
