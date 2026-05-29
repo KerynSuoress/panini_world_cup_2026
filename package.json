@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "start": "node scripts/migrate.mjs && node ./dist/server/entry.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "catalog:build": "tsx scripts/build-catalog.ts",

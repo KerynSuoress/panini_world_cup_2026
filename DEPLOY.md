@@ -51,28 +51,30 @@ Railway automatically exposes `DATABASE_URL` to the app at runtime.
 
 ---
 
-## 5. Configure build & start commands
+## 5. Build & start (automatic)
 
-In your Railway app service → **Settings → Build & Deploy**:
+Railway’s Railpack reads `package.json` automatically:
 
-| Setting | Value |
+| Script | Command |
 |---|---|
-| Build Command | `npm run build` |
-| Start Command | `node ./dist/server/entry.mjs` |
+| Build | `npm run build` (default) |
+| Start | `npm start` → `node ./dist/server/entry.mjs` |
+
+You usually **do not** need to set custom build/start commands in the dashboard. If deploy fails with “No start command detected”, ensure `package.json` includes the `"start"` script and redeploy.
 
 ---
 
-## 6. Run the database migration
+## 6. Database migrations (automatic)
 
-After the first deploy completes, open a terminal and run:
+Migrations run **on every deploy** when the app starts — no Railway CLI needed.
 
-```bash
-railway login
-railway link   # select your project and environment
-railway run npm run db:migrate
-```
+1. Ensure `DATABASE_URL` is set on your **app** service (from the MySQL plugin).
+2. Push code that includes the `drizzle/` folder (SQL migrations are in the repo).
+3. On `npm start`, the app runs `scripts/migrate.mjs` first, then starts the server.
 
-This creates the `profiles` and `collection` tables. You only need to do this once (or after schema changes).
+Check deploy logs for `[migrate] Database schema is up to date`. If you see `[migrate] Failed`, verify `DATABASE_URL` and that the MySQL service is running.
+
+**Local / optional CLI:** You can still run `npm run db:migrate` when developing with a `.env` file.
 
 ---
 
@@ -88,13 +90,12 @@ railway up
 
 ## Subsequent schema changes
 
-If you update `src/lib/schema.ts`, generate a new migration and run it:
+If you update `src/lib/schema.ts`:
 
 ```bash
-npm run db:generate   # generates SQL migration in /drizzle
+npm run db:generate   # creates a new SQL file in drizzle/
 git add drizzle/ && git commit -m "add migration"
-git push              # triggers redeploy
-railway run npm run db:migrate
+git push              # redeploy — migrate runs automatically on start
 ```
 
 ---
