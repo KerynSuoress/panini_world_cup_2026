@@ -194,12 +194,12 @@ export default function Exchange() {
         },
         {
           id: "give",
-          label: "You give",
+          label: "I can give you",
           count: result.summary.youGiveCount,
         },
         {
           id: "get",
-          label: "You get",
+          label: "You can give me",
           count: result.summary.youGetCount,
         },
       ]
@@ -210,7 +210,7 @@ export default function Exchange() {
       <div className="rounded-3xl bg-[var(--color-primary)]/80 p-5 text-white shadow-lg backdrop-blur-xl ring-1 ring-white/30">
         <p className="text-sm font-medium opacity-90">Sticker exchange</p>
         <p className="mt-1 text-xs opacity-80">
-          Enter a friend&apos;s email to see who should give which stickers
+          Enter a friend&apos;s email to see what you can give each other
         </p>
       </div>
 
@@ -255,7 +255,7 @@ export default function Exchange() {
               <p className="text-2xl font-black tabular-nums text-[var(--color-accent-green)]">
                 {result.summary.youGiveCount}
               </p>
-              <p className="text-xs font-semibold text-gray-600">You give</p>
+              <p className="text-xs font-semibold text-gray-600">I can give you</p>
             </div>
             <div className="rounded-2xl bg-[var(--color-accent-teal)]/15 px-3 py-3 text-center ring-1 ring-[var(--color-accent-teal)]/25">
               <p className="text-2xl font-black tabular-nums text-[var(--color-accent-teal)]">
@@ -267,7 +267,7 @@ export default function Exchange() {
               <p className="text-2xl font-black tabular-nums text-yellow-800">
                 {result.summary.youGetCount}
               </p>
-              <p className="text-xs font-semibold text-gray-600">You get</p>
+              <p className="text-xs font-semibold text-gray-600">You can give me</p>
             </div>
           </div>
 
@@ -323,23 +323,23 @@ export default function Exchange() {
               <div>
                 <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-[var(--color-accent-green)]">
                   <span className="inline-block h-2 w-2 rounded-full bg-[var(--color-accent-green)]" />
-                  You give them ({result.youGive.length})
+                  I can give you ({result.youGive.length})
                 </h3>
                 <ExchangeList
                   stickers={result.youGive}
-                  emptyMessage="Nothing to give — you have no repeats they still need."
-                  badgeLabel={(q) => `${q} to give`}
+                  emptyMessage="I have no repeats you're still missing."
+                  badgeLabel={(q) => `×${q} I have`}
                 />
               </div>
               <div>
                 <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-[var(--color-accent-yellow)]">
                   <span className="inline-block h-2 w-2 rounded-full bg-[var(--color-accent-yellow)]" />
-                  They give you ({result.youGet.length})
+                  You can give me ({result.youGet.length})
                 </h3>
                 <ExchangeList
                   stickers={result.youGet}
-                  emptyMessage="Nothing to get — they have no repeats you still need."
-                  badgeLabel={(q) => `${q} available`}
+                  emptyMessage="You have no repeats I'm still missing."
+                  badgeLabel={(q) => `×${q} you have`}
                 />
               </div>
             </div>
@@ -348,16 +348,16 @@ export default function Exchange() {
           {subTab === "give" && (
             <ExchangeList
               stickers={result.youGive}
-              emptyMessage="You have no repeats that they're still missing."
-              badgeLabel={(q) => `${q} to give`}
+              emptyMessage="I have no repeats you're still missing."
+              badgeLabel={(q) => `×${q} I have`}
             />
           )}
 
           {subTab === "get" && (
             <ExchangeList
               stickers={result.youGet}
-              emptyMessage="They have no repeats that you still need."
-              badgeLabel={(q) => `${q} available`}
+              emptyMessage="You have no repeats I'm still missing."
+              badgeLabel={(q) => `×${q} you have`}
             />
           )}
         </>

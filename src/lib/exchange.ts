@@ -101,14 +101,14 @@ export function formatExchangeShareText(
     `Panini exchange — ${you} ↔ ${partner}`,
     "",
     ...formatStickerBlock(
-      `I give you (${youGive.length}):`,
+      `I can give you (${youGive.length}):`,
       youGive,
-      "Nothing on my side.",
+      "I have nothing to give you.",
     ),
     ...formatStickerBlock(
-      `You give me (${youGet.length}):`,
+      `You can give me (${youGet.length}):`,
       youGet,
-      "Nothing on your side.",
+      "You have nothing to give me.",
     ),
   ]
     .join("\n")
