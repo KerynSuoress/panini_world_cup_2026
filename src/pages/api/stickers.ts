@@ -15,14 +15,19 @@ export const GET: APIRoute = async ({ url }) => {
   const db = getDb();
   if (!db) return new Response(empty, { headers });
 
-  const rows = await db.select().from(collection).where(eq(collection.profileId, profileId));
+  try {
+    const rows = await db.select().from(collection).where(eq(collection.profileId, profileId));
 
-  const owned: Record<string, boolean> = {};
-  const repeats: Record<string, number> = {};
-  for (const row of rows) {
-    if (row.owned) owned[row.stickerNumber] = true;
-    if (row.repeats > 0) repeats[row.stickerNumber] = row.repeats;
+    const owned: Record<string, boolean> = {};
+    const repeats: Record<string, number> = {};
+    for (const row of rows) {
+      if (row.owned) owned[row.stickerNumber] = true;
+      if (row.repeats > 0) repeats[row.stickerNumber] = row.repeats;
+    }
+
+    return new Response(JSON.stringify({ owned, repeats }), { headers });
+  } catch (err) {
+    console.error('[stickers GET] DB error:', err);
+    return new Response(empty, { headers });
   }
-
-  return new Response(JSON.stringify({ owned, repeats }), { headers });
 };

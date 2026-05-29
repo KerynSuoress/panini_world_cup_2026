@@ -6,7 +6,6 @@ type DB = ReturnType<typeof drizzle<typeof schema>>;
 let _db: DB | null = null;
 
 function getConnectionUrl(): string | null {
-  // Railway injects MySQL connection strings under several possible names
   const candidates = [
     process.env.DATABASE_URL,
     process.env.MYSQL_URL,
@@ -20,12 +19,17 @@ function getConnectionUrl(): string | null {
 export function getDb(): DB | null {
   const url = getConnectionUrl();
   if (!url) {
-    console.warn('[db] No database URL found in environment. Checked: DATABASE_URL, MYSQL_URL, MYSQL_PRIVATE_URL, MYSQL_PUBLIC_URL, DATABASE_PRIVATE_URL');
+    console.warn('[db] No database URL found in environment');
     return null;
   }
   if (_db) return _db;
   try {
-    const pool = mysql.createPool(url);
+    const pool = mysql.createPool({
+      uri: url,
+      waitForConnections: true,
+      connectionLimit: 10,
+      ssl: { rejectUnauthorized: false }, // Railway MySQL requires SSL
+    });
     _db = drizzle(pool, { schema, mode: 'default' });
     console.log('[db] MySQL pool created successfully');
   } catch (err) {
