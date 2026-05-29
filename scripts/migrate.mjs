@@ -1,6 +1,7 @@
 /**
  * Applies Drizzle migrations at startup (no Railway CLI required).
- * Skips when DATABASE_URL is unset (local dev without MySQL).
+ * Skips when no database URL is set (local dev without MySQL).
+ * Non-fatal — app still boots even if migrations fail.
  */
 import { drizzle } from "drizzle-orm/mysql2";
 import { migrate } from "drizzle-orm/mysql2/migrator";
@@ -19,18 +20,25 @@ if (!url) {
   console.log("[migrate] No database URL found — skipping migrations");
   process.exit(0);
 }
-console.log("[migrate] Using connection from env var:", Object.keys(process.env).find(k => process.env[k] === url));
+
+const foundKey = Object.keys(process.env).find((k) => process.env[k] === url);
+console.log(`[migrate] Connecting via env var: ${foundKey}`);
 
 const migrationsFolder = join(dirname(fileURLToPath(import.meta.url)), "..", "drizzle");
-const pool = mysql.createPool(url);
+
+// 10 second timeout — if DB is unreachable, don't block app startup
+const pool = mysql.createPool({
+  uri: url,
+  connectTimeout: 10000,
+  connectionLimit: 1,
+});
 
 try {
   const db = drizzle(pool);
   await migrate(db, { migrationsFolder });
   console.log("[migrate] Database schema is up to date");
 } catch (err) {
-  console.error("[migrate] Failed:", err);
-  process.exit(1);
+  console.error("[migrate] Migration failed (app will still start):", err?.message ?? err);
 } finally {
-  await pool.end();
+  await pool.end().catch(() => {});
 }
