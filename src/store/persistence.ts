@@ -27,6 +27,7 @@ export async function initPersistence(session: Session): Promise<void> {
     fetch('/api/collection', {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+      keepalive: true, // survive page reload/navigation so the save isn't cancelled
       body: JSON.stringify({
         profileId: pid,
         stickerNumber,
