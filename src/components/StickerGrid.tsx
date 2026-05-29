@@ -22,16 +22,33 @@ export default function StickerGrid() {
     if (!activeSection) return;
     const el = document.getElementById(`section-${activeSection}`);
     el?.scrollIntoView({ behavior: "smooth", block: "start" });
-    setShowBackToTop(true);
   }, [activeSection]);
 
   useEffect(() => {
+    const SCROLL_SHOW_THRESHOLD = 320;
     const onScroll = () => {
-      if (window.scrollY < 100) setShowBackToTop(false);
+      const y =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      setShowBackToTop(y > SCROLL_SHOW_THRESHOLD);
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const scrollToTop = () => {
+    $activeSection.set("");
+    const top = document.getElementById("album-grid-top");
+    if (top) {
+      top.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      const root = document.scrollingElement ?? document.documentElement;
+      root.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const sections = useMemo(() => {
     return catalog.sections.map((section) => {
@@ -48,17 +65,15 @@ export default function StickerGrid() {
 
   return (
     <div className="space-y-6">
+      <div id="album-grid-top" className="scroll-mt-24" aria-hidden />
       <FilterBar />
       <SectionSelect />
 
       {showBackToTop && (
         <button
           type="button"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            setShowBackToTop(false);
-          }}
-          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-xl ring-2 ring-white/40 transition-all hover:scale-110 active:scale-95"
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-xl ring-2 ring-white/40 transition-all hover:scale-110 active:scale-95 max-md:bottom-[max(1.5rem,env(safe-area-inset-bottom))]"
           aria-label="Back to top"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
