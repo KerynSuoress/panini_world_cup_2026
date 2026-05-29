@@ -1,11 +1,8 @@
 import { atom } from 'nanostores';
 
-export type SessionMode = 'db' | 'local';
-
 export interface Session {
   profileId: number;
   email: string;
-  mode: SessionMode;
 }
 
 export const $session = atom<Session | null>(null);

@@ -20,20 +20,20 @@ export const POST: APIRoute = async ({ request }) => {
 
   const db = getDb();
   if (!db) {
-    console.warn('[profiles] DATABASE_URL not set — falling back to local mode');
-    return new Response(JSON.stringify({ profileId: -1, email, mode: 'local' }), { headers });
+    console.error('[profiles] No database configured — DATABASE_URL is required');
+    return new Response(JSON.stringify({ error: 'Database not configured' }), { status: 503, headers });
   }
 
   try {
     const existing = await db.select().from(profiles).where(eq(profiles.email, email)).limit(1);
     if (existing.length > 0) {
-      return new Response(JSON.stringify({ profileId: existing[0].id, email, mode: 'db' }), { headers });
+      return new Response(JSON.stringify({ profileId: existing[0].id, email }), { headers });
     }
 
     const [result] = await db.insert(profiles).values({ email });
-    return new Response(JSON.stringify({ profileId: Number(result.insertId), email, mode: 'db' }), { headers });
+    return new Response(JSON.stringify({ profileId: Number(result.insertId), email }), { headers });
   } catch (err) {
     console.error('[profiles] DB error:', err);
-    return new Response(JSON.stringify({ profileId: -1, email, mode: 'local', dbError: true }), { headers });
+    return new Response(JSON.stringify({ error: 'Database error' }), { status: 500, headers });
   }
 };
