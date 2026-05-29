@@ -4,12 +4,15 @@ import { collection } from '../../lib/schema';
 import { eq } from 'drizzle-orm';
 
 const headers = { 'Content-Type': 'application/json' };
-const ok = new Response(JSON.stringify({ ok: true }), { headers });
+
+// IMPORTANT: return a fresh Response per request. A Response body can only be
+// consumed once, so a shared/module-level Response object throws on reuse.
+const ok = () => new Response(JSON.stringify({ ok: true }), { headers });
 
 // Single sticker update
 export const PATCH: APIRoute = async ({ request }) => {
   const db = getDb();
-  if (!db) return ok;
+  if (!db) return ok();
 
   try {
     const { profileId, stickerNumber, owned, repeats } = await request.json();
@@ -22,13 +25,13 @@ export const PATCH: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ ok: false, error: String(err) }), { status: 500, headers });
   }
 
-  return ok;
+  return ok();
 };
 
 // Bulk replace (used by import)
 export const PUT: APIRoute = async ({ request }) => {
   const db = getDb();
-  if (!db) return ok;
+  if (!db) return ok();
 
   try {
     const { profileId, owned, repeats } = await request.json() as {
@@ -57,5 +60,5 @@ export const PUT: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ ok: false, error: String(err) }), { status: 500, headers });
   }
 
-  return ok;
+  return ok();
 };
