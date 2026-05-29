@@ -1,5 +1,5 @@
 import type { Session } from './profileStore';
-import { $session } from './profileStore';
+import { $session, saveSession } from './profileStore';
 import { $hydrated, $owned, $repeats } from './collectionStore';
 
 let _importing = false;
@@ -7,16 +7,77 @@ let _importing = false;
 export async function initPersistence(session: Session): Promise<void> {
   if (typeof window === 'undefined' || $hydrated.get()) return;
 
-  if (session.mode === 'db' && session.profileId > 0) {
+  // If the stored session is local-mode, re-check with the server in case
+  // the DB is now available (env var added after initial session was saved).
+  let activeSession = session;
+  if (session.mode === 'local') {
     try {
-      const res = await fetch(`/api/stickers?profileId=${session.profileId}`);
-      const data = await res.json();
-      $owned.set(data.owned ?? {});
-      $repeats.set(data.repeats ?? {});
+      const res = await fetch('/api/profiles', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: session.email }),
+      });
+      if (res.ok) {
+        const fresh = await res.json();
+        if (fresh.mode === 'db' && fresh.profileId > 0) {
+          // DB is now available — upgrade the session
+          saveSession(fresh);
+          activeSession = fresh;
+        }
+      }
     } catch {
-      $owned.set({});
-      $repeats.set({});
+      // Network error — keep local session
     }
+  }
+
+  if (activeSession.mode === 'db' && activeSession.profileId > 0) {
+    // Load from DB
+    let dbOwned: Record<string, boolean> = {};
+    let dbRepeats: Record<string, number> = {};
+
+    try {
+      const res = await fetch(`/api/stickers?profileId=${activeSession.profileId}`);
+      if (res.ok) {
+        const data = await res.json();
+        dbOwned = data.owned ?? {};
+        dbRepeats = data.repeats ?? {};
+      }
+    } catch {
+      console.warn('[persistence] Failed to load from DB, trying localStorage fallback');
+    }
+
+    // If DB returned nothing but localStorage has data (migration scenario), upload it
+    const localKey = `panini-collection-${activeSession.email}`;
+    const hasDbData = Object.keys(dbOwned).length > 0 || Object.keys(dbRepeats).length > 0;
+    if (!hasDbData) {
+      try {
+        const raw = localStorage.getItem(localKey);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          const localOwned: Record<string, boolean> = parsed.owned ?? {};
+          const localRepeats: Record<string, number> = parsed.repeats ?? {};
+          const hasLocalData = Object.keys(localOwned).length > 0 || Object.keys(localRepeats).length > 0;
+          if (hasLocalData) {
+            console.log('[persistence] Migrating localStorage data to DB…');
+            dbOwned = localOwned;
+            dbRepeats = localRepeats;
+            // Push local data up to DB
+            await fetch('/api/collection', {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ profileId: activeSession.profileId, owned: dbOwned, repeats: dbRepeats }),
+            });
+            // Clean up localStorage after migration
+            localStorage.removeItem(localKey);
+          }
+        }
+      } catch {
+        // localStorage unavailable — proceed with empty
+      }
+    }
+
+    $owned.set(dbOwned);
+    $repeats.set(dbRepeats);
     $hydrated.set(true);
 
     $owned.subscribe((owned, changedKey) => {
@@ -27,7 +88,7 @@ export async function initPersistence(session: Session): Promise<void> {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ profileId: pid, stickerNumber: changedKey, owned: owned[changedKey] ?? false, repeats: $repeats.get()[changedKey] ?? 0 }),
-      });
+      }).catch(() => console.warn('[persistence] PATCH failed for', changedKey));
     });
 
     $repeats.subscribe((repeats, changedKey) => {
@@ -38,11 +99,11 @@ export async function initPersistence(session: Session): Promise<void> {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ profileId: pid, stickerNumber: changedKey, owned: $owned.get()[changedKey] ?? false, repeats: repeats[changedKey] ?? 0 }),
-      });
+      }).catch(() => console.warn('[persistence] PATCH failed for', changedKey));
     });
   } else {
-    // Local mode — namespace by email
-    const key = `panini-collection-${session.email}`;
+    // True local mode — DB genuinely unavailable
+    const key = `panini-collection-${activeSession.email}`;
     try {
       const raw = localStorage.getItem(key);
       if (raw) {

@@ -8,11 +8,18 @@ import mysql from "mysql2/promise";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const url = process.env.DATABASE_URL;
+const url =
+  process.env.DATABASE_URL ||
+  process.env.MYSQL_URL ||
+  process.env.MYSQL_PRIVATE_URL ||
+  process.env.MYSQL_PUBLIC_URL ||
+  process.env.DATABASE_PRIVATE_URL;
+
 if (!url) {
-  console.log("[migrate] No DATABASE_URL — skipping");
+  console.log("[migrate] No database URL found — skipping migrations");
   process.exit(0);
 }
+console.log("[migrate] Using connection from env var:", Object.keys(process.env).find(k => process.env[k] === url));
 
 const migrationsFolder = join(dirname(fileURLToPath(import.meta.url)), "..", "drizzle");
 const pool = mysql.createPool(url);
