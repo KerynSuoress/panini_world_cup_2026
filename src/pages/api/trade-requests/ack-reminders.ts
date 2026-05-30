@@ -1,8 +1,8 @@
 import type { APIRoute } from "astro";
 import { and, eq } from "drizzle-orm";
-import { getDb } from "../../lib/db";
-import { expireStaleTrades } from "../../lib/trades";
-import { tradeRequests } from "../../lib/schema";
+import { getDb } from "../../../lib/db";
+import { expireStaleTrades } from "../../../lib/trades";
+import { tradeRequests } from "../../../lib/schema";
 
 const headers = { "Content-Type": "application/json" };
 
