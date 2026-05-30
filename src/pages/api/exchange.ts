@@ -2,27 +2,10 @@ import type { APIRoute } from "astro";
 import { eq } from "drizzle-orm";
 import { computeExchange } from "../../lib/exchange";
 import { getDb } from "../../lib/db";
-import { collection, profiles } from "../../lib/schema";
+import { profiles } from "../../lib/schema";
+import { getEffectiveCollectionState, loadCollectionState } from "../../lib/trades";
 
 const headers = { "Content-Type": "application/json" };
-
-async function loadCollection(profileId: number) {
-  const db = getDb();
-  if (!db) return null;
-
-  const rows = await db
-    .select()
-    .from(collection)
-    .where(eq(collection.profileId, profileId));
-
-  const owned: Record<string, boolean> = {};
-  const repeats: Record<string, number> = {};
-  for (const row of rows) {
-    if (row.owned) owned[row.stickerNumber] = true;
-    if (row.repeats > 0) repeats[row.stickerNumber] = row.repeats;
-  }
-  return { owned, repeats };
-}
 
 export const POST: APIRoute = async ({ request }) => {
   let profileId: number;
@@ -97,19 +80,19 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const [yours, partnerCollection] = await Promise.all([
-      loadCollection(profileId),
-      loadCollection(partner.id),
+    const [yoursEffective, partnerEffective] = await Promise.all([
+      getEffectiveCollectionState(db, profileId),
+      loadCollectionState(db, partner.id),
     ]);
 
-    if (!yours || !partnerCollection) {
+    if (!yoursEffective || !partnerEffective) {
       return new Response(JSON.stringify({ error: "Could not load collections" }), {
         status: 500,
         headers,
       });
     }
 
-    const { youGive, youGet } = computeExchange(yours, partnerCollection);
+    const { youGive, youGet } = computeExchange(yoursEffective, partnerEffective);
 
     return new Response(
       JSON.stringify({

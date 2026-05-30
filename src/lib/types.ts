@@ -44,3 +44,20 @@ export interface GlobalStats {
   totalRepeats: number;
   percent: number;
 }
+
+export interface TradeSummarySticker {
+  number: string;
+  label?: string;
+  section: string;
+  sectionSlug: string;
+  quantity: number;
+}
+
+export interface TradeSummary {
+  initiatorEmail: string;
+  partnerEmail: string;
+  youGive: TradeSummarySticker[];
+  youGet: TradeSummarySticker[];
+  giveCount: number;
+  getCount: number;
+}

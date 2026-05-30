@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "start": "node scripts/migrate.mjs && node ./dist/server/entry.mjs",
+    "check": "astro check",
+    "start": "MIGRATE_STRICT=1 node scripts/migrate.mjs && node ./dist/server/entry.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "catalog:build": "tsx scripts/build-catalog.ts",
@@ -16,6 +17,7 @@
     "catalog:kit-colors": "tsx scripts/apply-team-kit-colors.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:migrate:run": "MIGRATE_STRICT=1 node --env-file=.env scripts/migrate.mjs",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {

@@ -18,7 +18,9 @@ const url =
 
 if (!url) {
   console.log("[migrate] No database URL found — skipping migrations");
-  process.exit(0);
+  console.log("[migrate] Set DATABASE_URL (Railway MySQL → Variables) or use a .env file with:");
+  console.log("[migrate]   npm run db:migrate:run");
+  process.exit(process.env.MIGRATE_STRICT === "1" ? 1 : 0);
 }
 
 const foundKey = Object.keys(process.env).find((k) => process.env[k] === url);
@@ -40,7 +42,8 @@ try {
   await migrate(db, { migrationsFolder });
   console.log("[migrate] Database schema is up to date");
 } catch (err) {
-  console.error("[migrate] Migration failed (app will still start):", err?.message ?? err);
+  console.error("[migrate] Migration failed:", err?.message ?? err);
+  if (process.env.MIGRATE_STRICT === "1") process.exit(1);
 } finally {
   await pool.end().catch(() => {});
 }

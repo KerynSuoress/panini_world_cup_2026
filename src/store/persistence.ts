@@ -4,6 +4,21 @@ import { $hydrated, $owned, $repeats } from './collectionStore';
 
 let _importing = false;
 
+export async function reloadCollection(profileId: number): Promise<void> {
+  if (typeof window === "undefined" || profileId <= 0) return;
+  _importing = true;
+  try {
+    const res = await fetch(`/api/stickers?profileId=${profileId}`);
+    const data = await res.json();
+    $owned.set(data.owned ?? {});
+    $repeats.set(data.repeats ?? {});
+  } catch (err) {
+    console.error("[persistence] Failed to reload from DB:", err);
+  } finally {
+    _importing = false;
+  }
+}
+
 export async function initPersistence(session: Session): Promise<void> {
   if (typeof window === 'undefined' || $hydrated.get()) return;
   if (!session || session.profileId <= 0) return;

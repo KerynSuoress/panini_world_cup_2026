@@ -64,17 +64,60 @@ You usually **do not** need to set custom build/start commands in the dashboard.
 
 ---
 
-## 6. Database migrations (automatic)
+## 6. Database migrations (automatic — no CLI required)
 
-Migrations run **on every deploy** when the app starts — no Railway CLI needed.
+You **do not** need the Railway CLI. Migrations run when the app starts in production.
 
-1. Ensure `DATABASE_URL` is set on your **app** service (from the MySQL plugin).
-2. Push code that includes the `drizzle/` folder (SQL migrations are in the repo).
-3. On `npm start`, the app runs `scripts/migrate.mjs` first, then starts the server.
+1. Ensure `DATABASE_URL` is set on your **app** service (copy from MySQL → **Variables** in the Railway dashboard).
+2. Push code that includes the `drizzle/` folder.
+3. Redeploy (push to GitHub, or **Deploy → Redeploy** in the Railway dashboard).
+4. Open **Deploy logs** and look for `[migrate] Database schema is up to date`.
 
-Check deploy logs for `[migrate] Database schema is up to date`. If you see `[migrate] Failed`, verify `DATABASE_URL` and that the MySQL service is running.
+If migration failed, see **“Migrate without CLI”** below.
 
-**Local / optional CLI:** You can still run `npm run db:migrate` when developing with a `.env` file.
+**Local (optional):** Copy `DATABASE_URL` from Railway into a `.env` file, then:
+
+```bash
+npm run db:migrate:run
+```
+
+(`db:migrate` / drizzle-kit is only needed when *generating* new migration files, not when applying them.)
+
+---
+
+## Migrate without CLI
+
+Pick **one** of these:
+
+### A. Redeploy (easiest)
+
+Push your branch or click **Redeploy** on the app service. `npm start` runs `scripts/migrate.mjs` before the server.
+
+### B. Run migrate locally with dashboard URL
+
+1. Railway → **MySQL** service → **Variables** → copy `DATABASE_URL` (or `MYSQL_URL`).
+2. Create `.env` in the project root:
+
+```env
+DATABASE_URL=mysql://user:pass@host:port/railway
+```
+
+3. From the project folder:
+
+```bash
+npm run db:migrate:run
+```
+
+You never need `railway login` or `railway run`.
+
+### C. Paste SQL in Railway (fallback)
+
+If A/B are not an option:
+
+1. Railway → **MySQL** → **Data** tab (or connect with any MySQL client using the public URL).
+2. Run the script [`drizzle/manual/trade_requests_once.sql`](drizzle/manual/trade_requests_once.sql) once.
+
+If foreign key errors say the table already exists, you only need the `INSERT INTO __drizzle_migrations` part (or skip if trades already work).
 
 ---
 

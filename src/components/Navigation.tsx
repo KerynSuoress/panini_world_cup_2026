@@ -19,11 +19,36 @@ const tabs = [
 export default function Navigation({ title, activeTab }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [incomingTradeCount, setIncomingTradeCount] = useState(0);
   const session = useStore($session);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    const onCounts = (e: Event) => {
+      const detail = (e as CustomEvent<{ incomingPending: number }>).detail;
+      setIncomingTradeCount(detail?.incomingPending ?? 0);
+    };
+    window.addEventListener("panini-trade-counts", onCounts);
+    return () => window.removeEventListener("panini-trade-counts", onCounts);
+  }, []);
+
+  useEffect(() => {
+    if (!session?.profileId) {
+      setIncomingTradeCount(0);
+      return;
+    }
+    fetch(`/api/trade-requests?profileId=${session.profileId}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (data?.counts?.incomingPending != null) {
+          setIncomingTradeCount(data.counts.incomingPending);
+        }
+      })
+      .catch(() => {});
+  }, [session?.profileId]);
 
   const switchProfile = () => {
     clearSession();
@@ -84,17 +109,21 @@ export default function Navigation({ title, activeTab }: NavigationProps) {
           <ul className="flex items-center gap-1">
             {tabs.map((tab) => {
               const isActive = tab.id === activeTab;
+              const showTradeBadge = tab.id === "exchange" && incomingTradeCount > 0;
               return (
                 <li key={tab.id}>
                   <a
                     href={tab.href}
-                    className={`block rounded-xl px-4 py-2 text-sm font-bold transition-all ${
+                    className={`relative block rounded-xl px-4 py-2 text-sm font-bold transition-all ${
                       isActive
                         ? "bg-[var(--color-primary)] text-white shadow-md"
                         : "text-gray-600 hover:bg-white hover:shadow-sm hover:text-[var(--color-primary)]"
                     }`}
                   >
                     {tab.label}
+                    {showTradeBadge && (
+                      <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-[var(--color-accent-teal)] ring-2 ring-white" />
+                    )}
                   </a>
                 </li>
               );
@@ -164,17 +193,21 @@ export default function Navigation({ title, activeTab }: NavigationProps) {
           <ul className="space-y-2">
             {tabs.map((tab) => {
               const isActive = tab.id === activeTab;
+              const showTradeBadge = tab.id === "exchange" && incomingTradeCount > 0;
               return (
                 <li key={tab.id}>
                   <a
                     href={tab.href}
-                    className={`block rounded-2xl px-4 py-3 text-sm font-bold transition-all ${
+                    className={`relative block rounded-2xl px-4 py-3 text-sm font-bold transition-all ${
                       isActive
                         ? "bg-[var(--color-primary)] text-white shadow-md"
                         : "text-gray-700 hover:bg-white hover:shadow-sm"
                     }`}
                   >
                     {tab.label}
+                    {showTradeBadge && (
+                      <span className="absolute right-3 top-3 h-2 w-2 rounded-full bg-[var(--color-accent-teal)] ring-2 ring-white" />
+                    )}
                   </a>
                 </li>
               );
