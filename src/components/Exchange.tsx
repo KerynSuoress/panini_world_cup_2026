@@ -1170,27 +1170,6 @@ export default function Exchange() {
             <span className="text-gray-400"> · {result.partnerEmail}</span>
           </div>
 
-          <div className="grid grid-cols-3 gap-2">
-            <div className="rounded-2xl bg-[var(--color-accent-green)]/15 px-3 py-3 text-center ring-1 ring-[var(--color-accent-green)]/25">
-              <p className="text-2xl font-black tabular-nums text-[var(--color-accent-green)]">
-                {result.summary.youGiveCount}
-              </p>
-              <p className="text-xs font-semibold text-gray-600">I can give you</p>
-            </div>
-            <div className="rounded-2xl bg-[var(--color-accent-teal)]/15 px-3 py-3 text-center ring-1 ring-[var(--color-accent-teal)]/25">
-              <p className="text-2xl font-black tabular-nums text-[var(--color-accent-teal)]">
-                {result.summary.mutualCount}
-              </p>
-              <p className="text-xs font-semibold text-gray-600">Can swap</p>
-            </div>
-            <div className="rounded-2xl bg-[var(--color-accent-yellow)]/25 px-3 py-3 text-center ring-1 ring-[var(--color-accent-yellow)]/40">
-              <p className="text-2xl font-black tabular-nums text-yellow-800">
-                {result.summary.youGetCount}
-              </p>
-              <p className="text-xs font-semibold text-gray-600">You can give me</p>
-            </div>
-          </div>
-
           {!(subTab === "match" && matchStage !== "select") && (
             <div className="rounded-3xl bg-white/50 p-4 shadow-lg backdrop-blur-xl ring-1 ring-white/60">
               <p className="mb-3 text-sm font-bold text-gray-800">Share trade list</p>
