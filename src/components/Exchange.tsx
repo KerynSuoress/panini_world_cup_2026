@@ -201,6 +201,8 @@ function TradeReviewSummary({
 
 // ─── Swap Studio (match tab) ─────────────────────────────────────────────────
 
+type SwapStage = "select" | "review" | "sent";
+
 function SwapStudio({
   youGive,
   youGet,
@@ -208,6 +210,7 @@ function SwapStudio({
   partnerEmail,
   partnerName,
   onTradeSent,
+  onStageChange,
 }: {
   youGive: ExchangeSticker[];
   youGet: ExchangeSticker[];
@@ -215,6 +218,7 @@ function SwapStudio({
   partnerEmail: string;
   partnerName: string;
   onTradeSent: () => void;
+  onStageChange?: (stage: SwapStage) => void;
 }) {
   const [selectedGive, setSelectedGive] = useState<Set<string>>(new Set());
   const [selectedGet, setSelectedGet] = useState<Set<string>>(new Set());
@@ -223,19 +227,27 @@ function SwapStudio({
   const [sendError, setSendError] = useState<string | null>(null);
   const [sendDone, setSendDone] = useState(false);
 
-  const toggleGive = (num: string) =>
+  useEffect(() => {
+    onStageChange?.(sendDone ? "sent" : step);
+  }, [step, sendDone, onStageChange]);
+
+  const toggleGive = (num: string) => {
+    setSendDone(false);
     setSelectedGive((prev) => {
       const next = new Set(prev);
       next.has(num) ? next.delete(num) : next.add(num);
       return next;
     });
+  };
 
-  const toggleGet = (num: string) =>
+  const toggleGet = (num: string) => {
+    setSendDone(false);
     setSelectedGet((prev) => {
       const next = new Set(prev);
       next.has(num) ? next.delete(num) : next.add(num);
       return next;
     });
+  };
 
   const reviewGive = useMemo(
     () => filterSelected(youGive, selectedGive),
@@ -864,6 +876,7 @@ export default function Exchange() {
   const [selectedTradeId, setSelectedTradeId] = useState<number | null>(null);
   const [popupTrade, setPopupTrade] = useState<TradeListItem | null>(null);
   const [popupDismissed, setPopupDismissed] = useState(false);
+  const [matchStage, setMatchStage] = useState<SwapStage>("select");
 
   useEffect(() => {
     const saved = localStorage.getItem(PARTNER_EMAIL_KEY);
@@ -1178,32 +1191,34 @@ export default function Exchange() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white/50 p-4 shadow-lg backdrop-blur-xl ring-1 ring-white/60">
-            <p className="mb-3 text-sm font-bold text-gray-800">Share trade list</p>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-              <button
-                type="button"
-                onClick={copyShareText}
-                className="rounded-2xl bg-[var(--color-primary)]/10 px-4 py-3 text-sm font-bold text-[var(--color-primary)] ring-1 ring-[var(--color-primary)]/20 transition-all hover:bg-[var(--color-primary)]/15 active:scale-[0.98]"
-              >
-                {copyStatus === "copied" ? "Copied!" : "Copy text"}
-              </button>
-              <button
-                type="button"
-                onClick={shareViaWhatsApp}
-                className="rounded-2xl bg-[#25D366]/15 px-4 py-3 text-sm font-bold text-[#128C7E] ring-1 ring-[#25D366]/30 transition-all hover:bg-[#25D366]/25 active:scale-[0.98]"
-              >
-                Send on WhatsApp
-              </button>
-              <button
-                type="button"
-                onClick={downloadCsv}
-                className="rounded-2xl bg-white/70 px-4 py-3 text-sm font-bold text-gray-700 ring-1 ring-black/5 transition-all hover:bg-white active:scale-[0.98]"
-              >
-                Download CSV
-              </button>
+          {!(subTab === "match" && matchStage !== "select") && (
+            <div className="rounded-3xl bg-white/50 p-4 shadow-lg backdrop-blur-xl ring-1 ring-white/60">
+              <p className="mb-3 text-sm font-bold text-gray-800">Share trade list</p>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+                <button
+                  type="button"
+                  onClick={copyShareText}
+                  className="rounded-2xl bg-[var(--color-primary)]/10 px-4 py-3 text-sm font-bold text-[var(--color-primary)] ring-1 ring-[var(--color-primary)]/20 transition-all hover:bg-[var(--color-primary)]/15 active:scale-[0.98]"
+                >
+                  {copyStatus === "copied" ? "Copied!" : "Copy text"}
+                </button>
+                <button
+                  type="button"
+                  onClick={shareViaWhatsApp}
+                  className="rounded-2xl bg-[#25D366]/15 px-4 py-3 text-sm font-bold text-[#128C7E] ring-1 ring-[#25D366]/30 transition-all hover:bg-[#25D366]/25 active:scale-[0.98]"
+                >
+                  Send on WhatsApp
+                </button>
+                <button
+                  type="button"
+                  onClick={downloadCsv}
+                  className="rounded-2xl bg-white/70 px-4 py-3 text-sm font-bold text-gray-700 ring-1 ring-black/5 transition-all hover:bg-white active:scale-[0.98]"
+                >
+                  Download CSV
+                </button>
+              </div>
             </div>
-          </div>
+          )}
 
           {subTab === "match" && session && (
             <SwapStudio
@@ -1213,6 +1228,7 @@ export default function Exchange() {
               partnerEmail={result.partnerEmail}
               partnerName={partnerName}
               onTradeSent={onTradeSent}
+              onStageChange={setMatchStage}
             />
           )}
 
