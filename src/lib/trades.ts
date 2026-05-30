@@ -32,6 +32,10 @@ type Db = DrizzleDb | DrizzleTx;
 
 export type { TradeSummary, TradeSummarySticker };
 
+// Pending trades are reserved for this many days before auto-expiring.
+// Keep in sync with the "expires in 3 days" copy in Exchange.tsx.
+export const TRADE_EXPIRY_DAYS = 3;
+
 export class TradeValidationError extends Error {
   readonly code = "TRADE_VALIDATION";
   constructor(message: string) {
