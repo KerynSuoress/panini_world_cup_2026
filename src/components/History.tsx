@@ -81,11 +81,6 @@ export default function History() {
         setEntries([]);
         return;
       }
-      if (data.setupRequired) {
-        setError(
-          "History is setting up — redeploy the app or ask the admin to run the DB migration.",
-        );
-      }
       setEntries(data.entries ?? []);
     } catch {
       setError("Could not reach the server.");
