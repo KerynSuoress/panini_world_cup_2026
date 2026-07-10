@@ -20,7 +20,7 @@
 - **New:** `src/pages/api/history.ts` — `GET /api/history?profileId=&filter=&limit=`
 - **Updated:** `src/pages/api/collection.ts` — `PATCH` now reads old state, upserts collection, and writes a history row when owned/repeats change.
 - **Schema:** `history` table in `src/lib/schema.ts`
-- **Migration:** `drizzle/0001_history.sql` + journal entry (auto-applies on deploy via `scripts/migrate.mjs`)
+- **Migration:** `drizzle/0002_history.sql` + journal entry (auto-applies on deploy via `scripts/migrate.mjs`; runs after `0001_trade_requests`)
 
 ### History filters
 
