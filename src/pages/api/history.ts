@@ -68,6 +68,7 @@ export const GET: APIRoute = async ({ url }) => {
         oldRepeats: row.oldRepeats,
         newRepeats: row.newRepeats,
         occurredAt: row.occurredAt,
+        undoneAt: row.undoneAt,
       };
     });
 

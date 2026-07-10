@@ -48,6 +48,7 @@ export const history = mysqlTable('history', {
   oldRepeats: int('old_repeats').notNull().default(0),
   newRepeats: int('new_repeats').notNull().default(0),
   occurredAt: timestamp('occurred_at').defaultNow(),
+  undoneAt: timestamp('undone_at'),
 }, (t) => [
   index('idx_profile_time').on(t.profileId, t.occurredAt),
 ]);

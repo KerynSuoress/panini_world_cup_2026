@@ -10,6 +10,23 @@ import {
 
 const MAX_RESULTS = 30;
 
+/** Collapse spaces/hyphens so "FWC-9", "fwc 9", and "FWC 9" all match. */
+function normalizeCode(value: string): string {
+  return value.toLowerCase().replace(/[\s\-_]/g, "");
+}
+
+function stickerMatchesQuery(
+  number: string,
+  label: string | undefined,
+  query: string,
+): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return false;
+  if (normalizeCode(number).includes(normalizeCode(q))) return true;
+  const lbl = (label ?? "").toLowerCase();
+  return lbl.length > 0 && lbl.includes(q);
+}
+
 function sectionColor(slug: string): string {
   return (
     catalog.sections.find((s) => s.slug === slug)?.colors?.primary ?? "#1B3FA0"
@@ -39,14 +56,11 @@ export default function StickerSearch() {
   }, [open]);
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return [];
+    if (!query.trim()) return [];
 
-    const matches = getAllStickers().filter((sticker) => {
-      const num = sticker.number.toLowerCase();
-      const label = (sticker.label ?? "").toLowerCase();
-      return num.includes(q) || label.includes(q);
-    });
+    const matches = getAllStickers().filter((sticker) =>
+      stickerMatchesQuery(sticker.number, sticker.label, query),
+    );
 
     return matches.slice(0, MAX_RESULTS).map((sticker) => {
       const section = findSectionForSticker(sticker.number);
@@ -119,7 +133,7 @@ export default function StickerSearch() {
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
-        Search by sticker code or name…
+        Search by sticker code…
       </button>
 
       {open && (
@@ -139,7 +153,7 @@ export default function StickerSearch() {
                   type="search"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="e.g. FWC-8 or Messi"
+                  placeholder="e.g. FWC 9 or MEX-9"
                   className="min-w-0 flex-1 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
                   autoComplete="off"
                 />
@@ -163,7 +177,7 @@ export default function StickerSearch() {
             <div className="flex-1 overflow-y-auto p-4">
               {!query.trim() && (
                 <p className="text-center text-sm text-gray-400 py-8">
-                  Type a sticker number or player name
+                  Type a sticker code — spaces and hyphens both work
                 </p>
               )}
 

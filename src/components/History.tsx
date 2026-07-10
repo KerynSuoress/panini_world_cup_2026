@@ -18,6 +18,7 @@ interface HistoryEntry {
   oldRepeats: number;
   newRepeats: number;
   occurredAt: string;
+  undoneAt: string | null;
 }
 
 const filters: { id: HistoryFilter; label: string }[] = [
@@ -95,19 +96,17 @@ export default function History() {
   }, [loadHistory]);
 
   const undoEntry = async (entry: HistoryEntry) => {
-    if (!session?.profileId) return;
+    if (!session?.profileId || entry.undoneAt) return;
     setUndoingId(entry.id);
     setError(null);
 
     try {
-      const res = await fetch("/api/collection", {
-        method: "PATCH",
+      const res = await fetch("/api/history/undo", {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           profileId: session.profileId,
-          stickerNumber: entry.stickerNumber,
-          owned: entry.oldOwned,
-          repeats: entry.oldRepeats,
+          historyId: entry.id,
         }),
       });
       const data = await res.json();
@@ -116,9 +115,9 @@ export default function History() {
         return;
       }
 
-      $owned.setKey(entry.stickerNumber, entry.oldOwned);
-      if (entry.oldRepeats > 0) {
-        $repeats.setKey(entry.stickerNumber, entry.oldRepeats);
+      $owned.setKey(entry.stickerNumber, data.owned as boolean);
+      if ((data.repeats as number) > 0) {
+        $repeats.setKey(entry.stickerNumber, data.repeats as number);
       } else {
         const repeats = { ...$repeats.get() };
         delete repeats[entry.stickerNumber];
@@ -179,17 +178,22 @@ export default function History() {
         <ul className="space-y-2">
           {entries.map((entry) => {
             const dot = sectionColor(entry.sectionSlug);
+            const isUndone = Boolean(entry.undoneAt);
             return (
               <li
                 key={entry.id}
-                className="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3 shadow-sm ring-1 ring-white/60"
+                className={`flex items-center gap-3 rounded-2xl px-4 py-3 shadow-sm ring-1 ring-white/60 ${
+                  isUndone ? "bg-gray-100/80 opacity-70" : "bg-white/80"
+                }`}
               >
                 <span
                   className="h-2.5 w-2.5 shrink-0 rounded-full"
-                  style={{ backgroundColor: dot }}
+                  style={{ backgroundColor: dot, opacity: isUndone ? 0.5 : 1 }}
                 />
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-bold text-gray-800">
+                  <p
+                    className={`text-sm font-bold ${isUndone ? "text-gray-500 line-through" : "text-gray-800"}`}
+                  >
                     {entry.stickerNumber}
                     {entry.label && (
                       <span className="font-normal text-gray-500">
@@ -201,16 +205,25 @@ export default function History() {
                   <p className="text-xs text-gray-500">
                     {actionLabel(entry.action)} · {entry.section} ·{" "}
                     {timeAgo(entry.occurredAt)}
+                    {isUndone && entry.undoneAt && (
+                      <> · undone {timeAgo(entry.undoneAt)}</>
+                    )}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => undoEntry(entry)}
-                  disabled={undoingId === entry.id}
-                  className="shrink-0 rounded-xl bg-black/5 px-3 py-1.5 text-xs font-bold text-gray-700 transition-colors hover:bg-black/10 disabled:opacity-50"
-                >
-                  {undoingId === entry.id ? "…" : "Undo"}
-                </button>
+                {isUndone ? (
+                  <span className="shrink-0 rounded-xl bg-gray-200/80 px-3 py-1.5 text-xs font-bold text-gray-500">
+                    Undone
+                  </span>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => undoEntry(entry)}
+                    disabled={undoingId === entry.id}
+                    className="shrink-0 rounded-xl bg-black/5 px-3 py-1.5 text-xs font-bold text-gray-700 transition-colors hover:bg-black/10 disabled:opacity-50"
+                  >
+                    {undoingId === entry.id ? "…" : "Undo"}
+                  </button>
+                )}
               </li>
             );
           })}
