@@ -73,6 +73,17 @@ export const GET: APIRoute = async ({ url }) => {
 
     return new Response(JSON.stringify({ entries }), { headers });
   } catch (err) {
+    const cause = err as { cause?: { code?: string } };
+    if (cause?.cause?.code === "ER_NO_SUCH_TABLE") {
+      return new Response(
+        JSON.stringify({
+          entries: [],
+          setupRequired: true,
+          error: "History table not migrated yet. Redeploy or run drizzle/manual/history_once.sql in Railway MySQL.",
+        }),
+        { headers },
+      );
+    }
     console.error("[history GET] DB error:", err);
     return new Response(JSON.stringify({ error: "Database error" }), {
       status: 500,

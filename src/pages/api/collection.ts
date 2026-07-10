@@ -54,15 +54,20 @@ export const PATCH: APIRoute = async ({ request }) => {
 
     const action = resolveHistoryAction(oldOwned, oldRepeats, newOwned, newRepeats);
     if (action) {
-      await db.insert(history).values({
-        profileId: pid,
-        stickerNumber: num,
-        action,
-        oldOwned,
-        newOwned,
-        oldRepeats,
-        newRepeats,
-      });
+      try {
+        await db.insert(history).values({
+          profileId: pid,
+          stickerNumber: num,
+          action,
+          oldOwned,
+          newOwned,
+          oldRepeats,
+          newRepeats,
+        });
+      } catch (historyErr) {
+        // Don't fail sticker saves if history table isn't migrated yet.
+        console.warn('[collection PATCH] history insert skipped:', historyErr);
+      }
     }
   } catch (err) {
     console.error('[collection PATCH] DB error:', err);
