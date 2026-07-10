@@ -1,4 +1,4 @@
-import { mysqlTable, int, varchar, boolean, timestamp, uniqueIndex, mysqlEnum, json } from 'drizzle-orm/mysql-core';
+import { mysqlTable, int, varchar, boolean, timestamp, uniqueIndex, mysqlEnum, json, index } from 'drizzle-orm/mysql-core';
 import type { TradeSummary } from './types';
 
 export const profiles = mysqlTable('profiles', {
@@ -37,3 +37,17 @@ export const tradeRequests = mysqlTable('trade_requests', {
   expiresAt: timestamp('expires_at').notNull(),
   resolvedAt: timestamp('resolved_at'),
 });
+
+export const history = mysqlTable('history', {
+  id: int('id').autoincrement().primaryKey(),
+  profileId: int('profile_id').notNull().references(() => profiles.id),
+  stickerNumber: varchar('sticker_number', { length: 20 }).notNull(),
+  action: mysqlEnum('action', ['owned_on', 'owned_off', 'repeat_add', 'repeat_remove']).notNull(),
+  oldOwned: boolean('old_owned').notNull().default(false),
+  newOwned: boolean('new_owned').notNull().default(false),
+  oldRepeats: int('old_repeats').notNull().default(0),
+  newRepeats: int('new_repeats').notNull().default(0),
+  occurredAt: timestamp('occurred_at').defaultNow(),
+}, (t) => [
+  index('idx_profile_time').on(t.profileId, t.occurredAt),
+]);

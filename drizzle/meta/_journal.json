@@ -15,6 +15,13 @@
       "when": 1780015237700,
       "tag": "0001_trade_requests",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1752112800000,
+      "tag": "0002_history",
+      "breakpoints": true
     }
   ]
 }

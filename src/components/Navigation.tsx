@@ -5,7 +5,7 @@ import { resetPersistence } from "../store/persistence";
 
 interface NavigationProps {
   title: string;
-  activeTab: "grid" | "repeats" | "dashboard" | "exchange" | "data";
+  activeTab: "grid" | "repeats" | "dashboard" | "exchange" | "data" | "history";
 }
 
 const tabs = [
@@ -13,6 +13,7 @@ const tabs = [
   { id: "repeats" as const, label: "Repeats", href: "/repeats" },
   { id: "dashboard" as const, label: "Analytics", href: "/dashboard" },
   { id: "exchange" as const, label: "Exchange", href: "/exchange" },
+  { id: "history" as const, label: "History", href: "/history" },
   { id: "data" as const, label: "Data Sync", href: "/data" },
 ];
 

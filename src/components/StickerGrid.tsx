@@ -10,6 +10,7 @@ import {
   decrementSticker,
 } from "../store/collectionStore";
 import StickerCell from "./StickerCell";
+import StickerSearch from "./StickerSearch";
 
 export default function StickerGrid() {
   const owned = useStore($owned);
@@ -21,7 +22,15 @@ export default function StickerGrid() {
   useEffect(() => {
     if (!activeSection) return;
     const el = document.getElementById(`section-${activeSection}`);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!el) return;
+    // getBoundingClientRect() forces layout flush so content-visibility
+    // sections above the target use real heights before we scroll.
+    const rect = el.getBoundingClientRect();
+    const HEADER = 64;
+    window.scrollTo({
+      top: window.scrollY + rect.top - HEADER - 8,
+      behavior: "smooth",
+    });
   }, [activeSection]);
 
   useEffect(() => {
@@ -76,6 +85,7 @@ export default function StickerGrid() {
     <div className="space-y-6">
       <div id="album-grid-top" className="scroll-mt-24" aria-hidden />
       <FilterBar />
+      <StickerSearch />
       <SectionSelect />
 
       {showBackToTop && (
